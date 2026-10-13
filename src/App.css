@@ -1,0 +1,478 @@
+/* =====================================
+   APP.CSS
+   Style des pages et composants
+   ===================================== */
+
+/* ---------- STRUCTURE ---------- */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1150px;
+  margin: auto;
+  padding: 28px 22px;
+}
+
+/* ---------- NAVBAR ---------- */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 24px;
+  background: var(--carte);
+  border-bottom: 1px solid var(--bordure);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  color: var(--orange);
+}
+
+.navbar nav {
+  display: flex;
+  gap: 14px;
+}
+
+.navbar nav a {
+  color: var(--texte);
+  font-weight: 600;
+}
+
+.navbar nav a:hover {
+  color: var(--orange);
+}
+
+.navbar-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.theme-btn {
+  border: none;
+  background: transparent;
+  font-size: 20px;
+}
+
+/* ---------- FORMULAIRES ---------- */
+
+form {
+  display: grid;
+  gap: 15px;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--bordure);
+  background: var(--carte);
+  color: var(--texte);
+  font-size: 15px;
+  font-family: inherit;
+}
+
+/* ---------- BOUTONS ---------- */
+
+.btn {
+  display: inline-block;
+  padding: 11px 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  text-align: center;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.btn-primary {
+  background: var(--orange);
+  color: var(--brun);
+}
+
+.btn-small {
+  background: var(--orange);
+  color: var(--brun);
+  padding: 8px 13px;
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: #ffffff;
+}
+
+.btn-message {
+  background: #2980b9;
+  color: #ffffff;
+}
+
+.btn-call {
+  background: var(--orange);
+  color: var(--brun);
+}
+
+/* ---------- ACCUEIL ---------- */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 35px;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.badge {
+  display: inline-block;
+  background: var(--fond-doux);
+  color: var(--orange);
+  padding: 7px 14px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.hero h1 {
+  font-size: 44px;
+  line-height: 1.15;
+  margin: 16px 0;
+}
+
+.hero p {
+  opacity: 0.8;
+  margin-bottom: 22px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-image img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+/* ---------- MINI PUBS ---------- */
+
+.ads {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+  margin: 30px 0;
+}
+
+.ad-card {
+  padding: 20px;
+  border-radius: 18px;
+  background: var(--fond-doux);
+  border: 1px solid var(--bordure);
+}
+
+.ad-card h3 {
+  color: var(--orange);
+  margin-bottom: 6px;
+}
+
+/* ---------- QUALITE ---------- */
+
+.quality-box {
+  margin: 35px 0;
+  padding: 25px;
+  border-radius: 22px;
+  text-align: center;
+  background: var(--fond-doux);
+  border: 1px solid var(--bordure);
+}
+
+.quality-box h3 {
+  color: var(--orange);
+}
+
+.quality-number {
+  font-size: 52px;
+  font-weight: 800;
+  color: var(--orange);
+  margin: 10px 0;
+}
+
+.quality-bar {
+  height: 12px;
+  background: var(--bordure);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.quality-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--orange), var(--orange-fonce));
+}
+
+/* ---------- PRODUITS ---------- */
+
+.products h2 {
+  font-size: 32px;
+  color: var(--orange);
+  margin-bottom: 20px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background: var(--carte);
+  border: 1px solid var(--bordure);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-body {
+  padding: 18px;
+}
+
+.taste {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.taste-sale {
+  background: #ff7043;
+  color: #ffffff;
+}
+
+.taste-sucre {
+  background: var(--orange);
+  color: var(--brun);
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--orange);
+}
+
+/* ---------- COMMANDE ---------- */
+
+.order-page {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.order-card {
+  width: 100%;
+  max-width: 620px;
+  padding: 28px;
+  border-radius: 22px;
+  background: var(--carte);
+  border: 1px solid var(--bordure);
+}
+
+.order-card h2 {
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+
+.total-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-radius: 12px;
+  background: var(--fond-doux);
+}
+
+.order-buttons {
+  display: grid;
+  gap: 10px;
+}
+
+/* ---------- ADMINISTRATION ---------- */
+
+.admin-page {
+  display: grid;
+  gap: 30px;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-header h2 {
+  color: var(--orange);
+}
+
+.admin-form {
+  width: 100%;
+  max-width: 620px;
+  padding: 28px;
+  border-radius: 22px;
+  background: var(--carte);
+  border: 1px solid var(--bordure);
+}
+
+.admin-form h3 {
+  color: var(--orange);
+  margin-bottom: 15px;
+}
+
+.admin-list {
+  display: grid;
+  gap: 12px;
+}
+
+.admin-item {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 14px;
+  border-radius: 14px;
+  background: var(--carte);
+  border: 1px solid var(--bordure);
+}
+
+.admin-item img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.admin-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
+
+.admin-actions button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.admin-actions button:first-child {
+  background: var(--orange);
+  color: var(--brun);
+}
+
+.admin-actions button:last-child {
+  background: #e74c3c;
+  color: #ffffff;
+}
+
+.canal {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.error {
+  color: #ff6b6b;
+  font-weight: 600;
+}
+
+/* ---------- FOOTER ---------- */
+
+.footer {
+  background: #0d0704;
+  color: var(--texte-clair);
+  border-top: 1px solid var(--bordure);
+  padding: 35px 20px;
+  text-align: center;
+}
+
+.footer h2 {
+  color: var(--orange);
+}
+
+.footer a {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* ---------- TELEPHONE ---------- */
+
+@media (max-width: 850px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+}
