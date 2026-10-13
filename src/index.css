@@ -1,0 +1,62 @@
+/* =====================================
+   INDEX.CSS
+   Base du site + mode clair / sombre
+   ===================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
+
+:root {
+  --orange: #ffb84d;
+  --orange-fonce: #ff7043;
+  --brun: #241509;
+  --brun-clair: #1d120a;
+  --blanc: #ffffff;
+  --texte-clair: #fff5ea;
+  --texte-gris: #d9c6b4;
+}
+
+/* Mode clair */
+body.light {
+  --fond: #fff8f0;
+  --texte: #241509;
+  --carte: #ffffff;
+  --bordure: #f0dcc7;
+  --fond-doux: rgba(255, 184, 77, 0.12);
+}
+
+/* Mode sombre */
+body.dark {
+  --fond: #120b06;
+  --texte: #fff5ea;
+  --carte: #1d120a;
+  --bordure: rgba(255, 184, 77, 0.25);
+  --fond-doux: rgba(255, 184, 77, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--fond);
+  color: var(--texte);
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
